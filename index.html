@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery 2.0 Homepage</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/corestyles.css"> 
+    <script src="../javascript/index.js" defer></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <img src="../images/mail.png" alt="Email Icon" class="icon">
+                <a href="mailto:info@gallery2.0">info@gallery2.0</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="../images/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="../images/instagram.png" alt="Instagram"></a>
+                <a href="https://www.cart.com" target="_blank"><img src="../images/cart.png" alt="Cart"></a>
+                <a href="https://www.account.com" target="_blank"><img src="../images/account.png" alt="Account"></a>
+                <!-- Add more social media icons as needed -->
+            </div>
+        </div>
+    </div>
+
+    <div id="cs-menu-group-1040">
+        <div class="cs-container">
+            <div class="cs-content">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ffancy-divider.svg" alt="divider" width="181" height="36" aria-hidden="true">
+                </picture>
+                <img src="../images/logo.png" alt="Logo" class="top-right-logo">
+                <h2 class="cs-title">Welcome</h2>
+                <div class="cs-button-group">
+                    <button class="cs-button cs-active" data-filter="one" onclick="window.location.href='#cs-menu-group';">
+                        About Us
+                    </button>
+                    <button class="cs-button" data-filter="two" onclick="window.location.href='#cs-menu-group';">
+                        Menu
+                    </button>
+                    <button class="cs-button" data-filter="three" onclick="window.location.href='#cs-menu-group';">
+                        Offers
+                    </button>
+                    <button class="cs-button" data-filter="four" onclick="window.location.href='#cs-menu-group';">
+                        Contact Us
+                    </button>
+                    <button class="cs-button" data-filter="five" onclick="window.location.href='#cs-menu-group';">
+                        Delivery
+                    </button>
+                </div>
+            </div>
+
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="../images/pizza5.jpg" alt="Image 5" loading="lazy">
+                        <div class="slide-text">
+                            <h2>New Supreme Pizza</h2>
+                            <p>Cheesy • Crispy • Loaded</p>
+                            <h3>$33</h3>
+                            <a href="#" class="order-button">Order Now</a>
+                            <p class="price-note">3 Different Sizes</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="../images/pizza6.jpg" alt="Image 6" loading="lazy">
+                        <div class="slide-text">
+                            <h2>Pizza Special on Classics</h2>
+                            <p>Traditional</p>
+                            <h3>$9.99</h3>
+                            <a href="#" class="order-button">Order Now</a>
+                            <p class="price-note">Limited time offer</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="../images/pizza7.jpg" alt="Image 7" loading="lazy">
+                        <div class="slide-text">
+                            <h2>Family Combo</h2>
+                            <p>Big Savings for Big Families</p>
+                            <h3>$45</h3>
+                            <a href="#" class="order-button">Order Now</a>
+                            <p class="price-note">Minimum Order Required</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev"><img src="../images/previous.png" alt="Previous"></button>
+                <button class="next"><img src="../images/next.png" alt="Next"></button>
+            </div>
+            
+            <!-- Script for Image Slider -->
+            <script>
+                let currentSlide = 0;
+
+                document.querySelector('.next').addEventListener('click', () => {
+                    const slides = document.querySelector('.slides');
+                    const totalSlides = slides.children.length;
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+                });
+
+                document.querySelector('.prev').addEventListener('click', () => {
+                    const slides = document.querySelector('.slides');
+                    const totalSlides = slides.children.length;
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+                });
+            </script>
+
+            <h2 class="cs-best">Best Sellers</h2>
+            <!-- Breakfast -->
+            <div id="cs-menu1-1040" class="cs-menu-group" data-category="one">
+                <!-- Breakfast Section 1 -->
+                <section class="cs-menu">
+                    <div class="cs-container">
+                        <ul class="cs-card-group">
+                            <li class="cs-item">
+                                <picture class="cs-picture" aria-hidden="true">
+                                    <source media="(max-width: 600px)" srcset="../images/pizza1.jpg">
+                                    <source media="(min-width: 601px)" srcset="../images/pizza1.jpg">
+                                    <img loading="lazy" decoding="async" src="../images/pizza1.jpg" alt="Margherita Pizza" width="160" height="160">
+                                </picture>
+                                <div class="cs-info">
+                                    <h3 class="cs-h3">
+                                        <span class="cs-name">Margherita</span>
+                                        <span class="cs-price">$22</span>
+                                    </h3>
+                                    <p class="cs-item-p">
+                                        The classic Margherita Pizza features a simple yet delicious combination of fresh tomatoes, mozzarella cheese, and basil leaves, all atop a perfectly crisp and golden crust.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="cs-item">
+                                <picture class="cs-picture" aria-hidden="true">
+                                    <source media="(max-width: 600px)" srcset="../images/pizza2.jpg">
+                                    <source media="(min-width: 601px)" srcset="../images/pizza2.jpg">
+                                    <img loading="lazy" decoding="async" src="../images/pizza2.jpg" alt="Smoked Salmon Pizza" width="160" height="160">
+                                </picture>
+                                <div class="cs-info">
+                                    <h3 class="cs-h3">
+                                        <span class="cs-name">Smoked Salmon</span>
+                                        <span class="cs-price">$25</span>
+                                    </h3>
+                                    <p class="cs-item-p">
+                                        Indulge in the luxurious flavors of our Smoked Salmon Pizza, topped with creamy mascarpone, rich smoked salmon, capers, and a sprinkle of fresh dill.
+                                    </p>
+                                </div>
+                            </li>
+                            <!-- Add more items as needed -->
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            
+            <a href="" class="cs-button-solid">Start Your Order</a>
+        </div>
+    </div>
+</body>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-section">
+            <h2>Opening Hours</h2>
+            <p><strong>Monday – Tuesday</strong><br>Closed</p>
+            <p><strong>Wednesday – Thursday</strong><br>5:00PM – 9:00PM</p>
+            <p><strong>Friday – Saturday</strong><br>5:00PM – 10:00PM</p>
+            <p><strong>Sunday</strong><br>5:00PM – 9:00PM</p>
+        </div>
+        <div class="footer-section">
+            <h2>Our Address</h2>
+            <p>324 Toorak Rd, South Yarra VIC 3141</p>
+            <p>info@gallery2.0</p>
+            <p>0400 000 000</p>
+            <p>03 0000 0000</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="social-icons">
+        
+            <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="../images/facebook.png" alt="Facebook"></a>
+        </div>
+    </div>
+</footer>
+
+
+
+</html>
+       
